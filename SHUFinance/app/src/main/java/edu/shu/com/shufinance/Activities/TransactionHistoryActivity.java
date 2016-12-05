@@ -21,6 +21,14 @@ public class TransactionHistoryActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transaction_history);
+        getSupportActionBar().setTitle("TRANSACTION HISTORY");
+        student = ((MyApplication) this.getApplication()).getLoggedinStudent();
+        loggedinType = ((MyApplication) this.getApplication()).getLoginType();
+
+        listView = (ListView) findViewById(R.id.transaction_listview);
+
+        TransactionsAdapter transactionsAdapter = new TransactionsAdapter(this, R.layout.listitem_transaction_history, student.getStudentTransactionHistory());
+        listView.setAdapter(transactionsAdapter);
 
     }
 }
