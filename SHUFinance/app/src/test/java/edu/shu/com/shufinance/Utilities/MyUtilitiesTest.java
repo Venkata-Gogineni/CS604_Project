@@ -45,16 +45,16 @@ public class MyUtilitiesTest {
     }
 
     @Test
-    public void isMobileNumberValidEquals() throws Exception {
+    public void isMobileNumberValidPassTest() throws Exception {
         MyUtilities myUtilities = new MyUtilities();
         assertEquals(true, myUtilities.isMobileNumberValid("1234567890"));
 
     }
 
     @Test
-    public void isMobileNumberValidNotEquals() throws Exception {
+    public void isMobileNumberValidFailTest() throws Exception {
         MyUtilities myUtilities = new MyUtilities();
-        assertNotEquals(false, myUtilities.isMobileNumberValid("1234567890"));
+        assertEquals(true, myUtilities.isMobileNumberValid("123456789"));
 
     }
 
@@ -143,15 +143,10 @@ public class MyUtilitiesTest {
     }
 
     @Test
-    public void validateCreditCard() throws Exception {
+    public void validateCreditCardFailTest() throws Exception {
 
         MyUtilities myUtilities = new MyUtilities();
         assertEquals(true, myUtilities.validateCreditCard("1234567812345678", "123"));
-        assertEquals(false, myUtilities.validateCreditCard("123", "1234567812345678"));
-        assertEquals(false, myUtilities.validateCreditCard("1234567812345678", "test"));
-        assertEquals(false, myUtilities.validateCreditCard("test", "123"));
-
-
     }
 
 
