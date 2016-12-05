@@ -72,17 +72,16 @@ public class MyUtilitiesTest {
 
 
     @Test
-    public void isEmailValidEquals() throws Exception {
+    public void isEmailValidEqualsPassTest() throws Exception {
         MyUtilities myUtilities = new MyUtilities();
         assertEquals(true, myUtilities.isEmailValid("test@test.com"));
-        assertEquals(false, myUtilities.isEmailValid("test"));
 
     }
 
     @Test
-    public void isEmailValidValidNotEquals() throws Exception {
+    public void isEmailValidValidEqualsFailTest() throws Exception {
         MyUtilities myUtilities = new MyUtilities();
-        assertNotEquals(false, myUtilities.isMobileNumberValid("test@test.com"));
+        assertEquals(true, myUtilities.isEmailValid("test"));
 
     }
 
@@ -99,13 +98,18 @@ public class MyUtilitiesTest {
     }
 
     @Test
-    public void isEmpty() throws Exception {
+    public void isEmptyPassTest() throws Exception {
 
         MyUtilities myUtilities = new MyUtilities();
         assertEquals(true, myUtilities.isEmpty(""));
-        assertEquals(false, myUtilities.isEmpty("test"));
     }
 
+    @Test
+    public void isEmptyFailTest() throws Exception {
+
+        MyUtilities myUtilities = new MyUtilities();
+        assertEquals(true, myUtilities.isEmpty("test"));
+    }
     @Test
     public void isEmptyNullArguments() throws Exception {
 
