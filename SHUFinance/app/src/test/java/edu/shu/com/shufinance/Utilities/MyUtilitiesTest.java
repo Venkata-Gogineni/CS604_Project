@@ -19,17 +19,16 @@ public class MyUtilitiesTest {
     }
 
     @Test
-    public void isPasswordValidEquals() throws Exception {
+    public void isPasswordValidPassTest() throws Exception {
         MyUtilities myUtilities = new MyUtilities();
         assertEquals(true, myUtilities.isPasswordValid("1234"));
 
     }
 
     @Test
-    public void isPasswordValidNotEquals() throws Exception {
+    public void isPasswordValidFailTest() throws Exception {
         MyUtilities myUtilities = new MyUtilities();
-
-        assertNotEquals(false, myUtilities.isPasswordValid("1234"));
+        assertNotEquals(true, myUtilities.isPasswordValid("124"));
     }
 
     @Test
@@ -72,37 +71,20 @@ public class MyUtilitiesTest {
 
 
     @Test
-    public void isEmailValidEqualsPassTest() throws Exception {
+    public void isEmailValidPassTest() throws Exception {
         MyUtilities myUtilities = new MyUtilities();
         assertEquals(true, myUtilities.isEmailValid("test@test.com"));
+
 
     }
 
     @Test
-    public void isEmailValidValidEqualsFailTest() throws Exception {
+    public void isEmailValidFailTest() throws Exception {
         MyUtilities myUtilities = new MyUtilities();
         assertEquals(true, myUtilities.isEmailValid("test"));
 
     }
 
-    @Test
-    public void isEmailValidNullArguments() throws Exception {
-
-        try {
-            MyUtilities myUtilities = new MyUtilities();
-            assertEquals(false, myUtilities.isEmailValid(null));
-        } catch (NullPointerException e) {
-
-        }
-
-    }
-
-    @Test
-    public void isEmptyPassTest() throws Exception {
-
-        MyUtilities myUtilities = new MyUtilities();
-        assertEquals(true, myUtilities.isEmpty(""));
-    }
 
     @Test
     public void isEmptyFailTest() throws Exception {
@@ -110,6 +92,7 @@ public class MyUtilitiesTest {
         MyUtilities myUtilities = new MyUtilities();
         assertEquals(true, myUtilities.isEmpty("test"));
     }
+
     @Test
     public void isEmptyNullArguments() throws Exception {
 
@@ -123,13 +106,17 @@ public class MyUtilitiesTest {
     }
 
     @Test
-    public void validateNetBanking() throws Exception {
+    public void validateNetBankingPassTest() throws Exception {
         MyUtilities myUtilities = new MyUtilities();
         assertEquals(true, myUtilities.validateNetBanking("SHU", "SHU"));
-        assertEquals(false, myUtilities.validateNetBanking("test", "SHU"));
-        assertEquals(false, myUtilities.validateNetBanking("SHU", "test"));
     }
 
+    @Test
+    public void validateNetBankingFailTest() throws Exception {
+        MyUtilities myUtilities = new MyUtilities();
+        assertEquals(true, myUtilities.validateNetBanking("test", "SHU"));
+
+    }
     @Test
     public void validateNetBankingNullArguments() throws Exception {
 
@@ -143,12 +130,18 @@ public class MyUtilitiesTest {
     }
 
     @Test
-    public void validateCreditCardFailTest() throws Exception {
+    public void validateCreditCardPassTest() throws Exception {
 
         MyUtilities myUtilities = new MyUtilities();
         assertEquals(true, myUtilities.validateCreditCard("1234567812345678", "123"));
     }
 
+    @Test
+    public void validateCreditCardFailTest() throws Exception {
+
+        MyUtilities myUtilities = new MyUtilities();
+        assertEquals(true, myUtilities.validateCreditCard("1234567812345678", "223"));
+    }
 
     @Test
     public void validateCreditCardNullArguments() throws Exception {
