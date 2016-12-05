@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/welcome_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="welcome"
+        android:textAllCaps="true"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/my_profile_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="#FFFF00FF"
+        android:text="@string/my_profile" />
+
+    <Button
+        android:id="@+id/transaction_history_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="#FFFF00FF"
+        android:text="@string/transaction_history" />
+
+    <Button
+        android:id="@+id/my_shu_balance_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="#FFFF00FF"
+        android:text="@string/my_shu_balance" />
+
+    <Button
+        android:id="@+id/transfer_funds_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="#FFFF00FF"
+        android:text="@string/transfer_funds" />
+
+    <Button
+        android:id="@+id/shu_policies_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFF00FF"
+        android:text="@string/shu_policies" />
+</LinearLayout>

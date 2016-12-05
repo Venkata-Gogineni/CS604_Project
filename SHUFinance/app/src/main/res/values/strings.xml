@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">SHUFinance</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign In</string>
+    <string name="action_sign_in_short">Sign In</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <!-- Strings related to Home Screen -->
+    <string name="my_profile">My Profile</string>
+    <string name="transaction_history">Transaction History</string>
+    <string name="my_shu_balance">My SHU Balance</string>
+    <string name="transfer_funds">Transfer Funds</string>
+    <string name="shu_policies">SHU Policies</string>
+    <string-array name="login_types">
+        <item>Parent</item>
+        <item>Student</item>
+    </string-array>
+
+
+    <!-- Strings related to Profile -->
+    <string name="student_name">Student Name</string>
+    <string name="parent_name">Parent Name</string>
+    <string name="student_shu_id">Student SHU ID</string>
+    <string name="course">Course</string>
+    <string name="student_email">Student Email</string>
+    <string name="parent_email">Parent Email</string>
+    <string name="student_mobile">Student Mobile</string>
+    <string name="parent_mobile">Parent Mobile</string>
+    <string name="change_password">Change Password</string>
+    <string name="save_profile">Save Profile</string>
+
+
+    <!-- Strings related to Trnasaction History -->
+    <string name="transaction_id">Transaction ID</string>
+    <string name="transaction_type">Transaction Type</string>
+    <string name="amount">Amount</string>
+
+
+    <!-- Strings related to Balance -->
+    <string name="mainBalance">Main</string>
+    <string name="laundryBalance">Laundry</string>
+    <string name="foodBalance">Food</string>
+    <string name="printingBalance">Printing</string>
+    <string name="bookStoreBalance">Book Store</string>
+    <string name="generalBalance">General</string>
+
+    <!-- Strings related to Change Password -->
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="submit">Submit</string>
+
+
+    <!-- Strings related to Transfer Funds-->
+    <string name="transfer_type">Transfer Type</string>
+    <string name="user_name">User Name</string>
+    <string name="password">Password</string>
+    <string name="credit_card">Credit Card</string>
+    <string name="net_banking">Net Banking</string>
+    <string-array name="transfer_types">
+        <item>Net Banking</item>
+        <item>Credit Card</item>
+    </string-array>
+
+
+</resources>
